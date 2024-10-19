@@ -10,6 +10,10 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ChatDashboardComponent } from './pages/chat-dashboard/chat-dashboard.component';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,19 @@ import { HomeComponent } from './pages/home/home.component';
     RegisterComponent,
     ChatDashboardComponent,
     VerifyEmailComponent,
-    HomeComponent
+    HomeComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass:'toast-bottom-left'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

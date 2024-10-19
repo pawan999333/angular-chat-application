@@ -4,20 +4,24 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { VerifyEmailComponent } from './pages/verify-email/verify-email.component';
 import { ChatDashboardComponent } from './pages/chat-dashboard/chat-dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path:'',
     redirectTo:'login',
-    pathMatch:'full'
+    pathMatch:'full',
+   
   },
   {
     path:'login',
-    component:LoginComponent
+    component:LoginComponent,
+     title:'Login Chat App'
   },
   {
     path:'register',
-    component:RegisterComponent
+    component:RegisterComponent,
+     title:'Register Chat App'
   },
   {
     path:'verify-email',
@@ -25,7 +29,9 @@ const routes: Routes = [
   },
   {
     path:'chat-dashboard',
-    component:ChatDashboardComponent
+    component:ChatDashboardComponent,
+    canActivate:[AuthGuard],
+     title:'Chat Dashboard'
   }
 ];
 
