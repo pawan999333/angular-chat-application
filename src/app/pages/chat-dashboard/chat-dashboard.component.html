@@ -27,7 +27,7 @@
                     </p>
                 </div>
 
-                <div class="messages" #messageBox>
+                <div class="messages" #messageBox [ngClass]="{ 'has-chats': hasChats }">
                     <ng-container *ngFor="let chat of chats">
                         <!-- <div>
                             <p> {{chat.from===currentUser.uid?'You ':toUser.displayName}}

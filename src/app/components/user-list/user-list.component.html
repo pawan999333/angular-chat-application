@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid pawan" [ngClass]="{'pawan': true, 'hidden': hidePawanClass}">
     <div class="mask-custom">
         <div class="p-3">
             <h3 class="text-white px-y2">User List</h3>
-            <div>
+            <div class="mobdiv">
                 <div *ngFor="let user of userList"
                 class="p-2 border-bottom">
                <div class="d-flex justify-content-around">

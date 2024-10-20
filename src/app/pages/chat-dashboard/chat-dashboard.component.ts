@@ -52,7 +52,7 @@ export class ChatDashboardComponent {
       this.chatSubscription.unsubscribe()
     }
     this.chats=[];
-
+    
     //important
    this.chatRefNode= `chats/${this.currentUser?.uid}****${uid}`
   
@@ -62,7 +62,7 @@ export class ChatDashboardComponent {
   
    this.oppChatRefNode=`chats/${uid}****${this.currentUser?.uid}`
 
-
+   
     this.auth.getUserByUserId(uid).subscribe(
       {
         next: (user) => {
@@ -77,7 +77,7 @@ export class ChatDashboardComponent {
         }
       })
 
-
+     
 
   }
 
@@ -102,6 +102,9 @@ export class ChatDashboardComponent {
    })
   }
 
+  get hasChats() {
+    return this.chats.length > 0; // Returns true if there are chats
+  }
   sendMessage(event:SubmitEvent){
     event.preventDefault();
     if(this.message.trim()===''){

@@ -25,8 +25,24 @@
 @media (min-width: 501px) and (max-width: 1024px) {
   /* Your style changes here */
   .startchat {
-      font-size: 10px; /* Example font size for screen sizes between 501px and 1024px */
+      font-size: 10px; 
   }
+}
+
+@media (max-width: 500px){
+  @media (max-width: 500px) {
+    .pawan.hidden {
+      display: none;  
+    }
+  }
+  .mobdiv{
+    max-height: 327px !important;
+  overflow-y: scroll;
+
+  }  
+  .startchat{
+    font-size:9px;
+  }  
 }
 
  
