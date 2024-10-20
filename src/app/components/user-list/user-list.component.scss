@@ -11,3 +11,22 @@
     width: 50px;
   }
   
+@media (max-width:1024px){
+
+  .mobResponsive1{
+    width: 50%;
+  }
+
+  .mobResponsive2{
+    word-wrap: break-word;
+    width: 80%;
+  }
+}
+@media (min-width: 501px) and (max-width: 1024px) {
+  /* Your style changes here */
+  .startchat {
+      font-size: 10px; /* Example font size for screen sizes between 501px and 1024px */
+  }
+}
+
+ 

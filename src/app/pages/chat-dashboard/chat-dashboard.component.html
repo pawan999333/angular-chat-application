@@ -2,13 +2,13 @@
 
     <div class="container-fluid">
         <div class="row pt-2">
-            <div class="col-md-4">
+            <div class="col-md-5 col-lg-4">
                 <app-user-list
                 (startChatEmitter)="startChatParent($event)"></app-user-list>
                 <div class="text-center">
                    <h3>{{currentUser.displayName}}</h3>
 
-                <button class="btn btn-success btn-sm" (click)="auth.signOut()">
+                <button class="btn btn-success btn-sm logoutbutton" (click)="auth.signOut()">
                     logout
                 </button>
                 <!-- <button class="btn btn-danger btn-sm ms-2"
@@ -16,7 +16,7 @@
                 </div>
                 
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7 col-lg-8">
                 <div *ngIf="toUser; else notSelectUserTemplate">
 
                 <div class="text-white">
@@ -46,7 +46,7 @@
 
 
 
-                <div class="mt-3">
+                <div class="mt-3 pb-2">
                     <form (ngSubmit)="sendMessage($event)">
                         <div class="input-group">
                             
@@ -55,7 +55,8 @@
                             <input type="text" id="message"
                             class="form-control"
                             name="message" [(ngModel)]="message" placeholder="Enter message here">
-                            <button type="submit" class="btn btn-success btn-sm">Send</button>
+                            <button type="submit" class="btn btn-success btn-sm"
+                            style="border-radius: 50%;">Send</button>
                       
                         </div>
                     </form>
@@ -71,8 +72,8 @@
 <ng-template #notSelectUserTemplate>
     <div class="card mask-custom text-white">
         <div class="card-body text-center">
-            <h3>Select user from user list</h3>
-            <p>To start new chat select user from left of user list pannel.</p>
+            <h3 class="h3tag">Select user from user list</h3>
+            <p class="ptag">To start new chat select user from left of user list pannel.</p>
         </div>
        
     </div>
