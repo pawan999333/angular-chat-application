@@ -6,7 +6,7 @@
                 <app-user-list
                 (startChatEmitter)="startChatParent($event)"></app-user-list>
                 <div class="text-center">
-                   <h3>{{currentUser.displayName}}</h3>
+                   <h3 class="h3text">{{currentUser.displayName}}</h3>
 
                 <button class="btn btn-success btn-sm logoutbutton" (click)="auth.signOut()">
                     logout
@@ -20,7 +20,7 @@
                 <div *ngIf="toUser; else notSelectUserTemplate">
 
                 <div class="text-white">
-                    <p class="mt-3">
+                    <p class="mt-3 chatUser">
                         Your are chatting with : <b>
                             {{toUser.name}}
                         </b>

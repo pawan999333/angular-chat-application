@@ -14,19 +14,22 @@
     }
 
     @media (max-width:500px){
-        .container-fluid   {
-        max-height: 100vh !important;
+    .h3text{
+        font-size: 14px !important;
     }
         
         .logoutbutton{
             margin-bottom: 0.5rem ;
-            // font-size: 12px;
+            font-size: 12px !important;
         }
         .h3tag{
             font-size: 15px;
         }
         .ptag{
             font-size: 12px;
+        }
+        .chatUser{
+            margin-top:0px!important;
         }
         // .messages{
         //     padding: 10px 10px 0px 10px;
